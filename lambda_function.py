@@ -8,9 +8,7 @@ def lambda_handler(event, context):
   response =table.scan()
   items=response['Items']
   print(items)
-  
-  #This is an update to the lambda
-  
+
   return {
     'isBase64Encoded': False,
     'headers': { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://my-static-bucket-jenkins.s3-website-us-east-1.amazonaws.com' },
