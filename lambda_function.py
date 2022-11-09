@@ -1,7 +1,7 @@
 import json
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
-#Update 1
+
 def lambda_handler(event, context):
   client = boto3.resource('dynamodb', region_name='us-east-1')
   table = client.Table('gitCCP_quiz')   
